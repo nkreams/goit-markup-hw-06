@@ -173,6 +173,7 @@ body {
     letter-spacing: 0.02em;
   }
 }
+
 /*mobilemenu*/
 
 .burger-menu {
@@ -701,16 +702,12 @@ body {
 }
 .footerdiv {
   display: flex;
-  flex-wrap: wrap;
-  gap: 72px;
-}
-.logotypediv {
-  padding: 0 16px;
+  flex-direction: column;
+  justify-content: center;
 }
 .footersocila {
-  padding: 0 56px;
+  margin-bottom: 72px;
 }
-.subpar,
 .socialmediap {
   text-align: center;
   font-weight: 500;
@@ -719,6 +716,7 @@ body {
   color: #ffffff;
   margin-bottom: 16px;
   font-size: 16px;
+  padding-top: 72px;
 }
 .socialulfooter {
   display: flex;
@@ -783,6 +781,7 @@ span {
   letter-spacing: 0.04em;
   padding-left: 16px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  opacity: 0.3;
 }
 .subbutton {
   display: flex;
@@ -809,17 +808,21 @@ span {
   fill: #f4f4fd;
 }
 @media screen and (min-width: 768px) {
+  .footerclases {
+    padding: 96px 0 96px 108px;
+  }
   .footerdiv {
     display: flex;
-    gap: 24px;
-    row-gap: 72px;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 768px;
   }
   .logotypediv {
-    padding-left: 108px;
-  }
-  .footersocila {
-    padding: 0;
+    margin-right: 24px;
   }
   .logosus {
     display: flex;
@@ -829,9 +832,8 @@ span {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 108px;
   }
-  .subpar {
+  .socialmediap {
     text-align: start;
     margin-bottom: 16px;
   }
@@ -841,7 +843,6 @@ span {
   .formfoot {
     display: flex;
     flex-direction: row;
-    gap: 24px;
   }
   .inputfoot {
     width: 264px;
@@ -863,13 +864,24 @@ span {
     display: flex;
     align-items: baseline;
     flex-wrap: nowrap;
+    justify-content: flex-end;
     gap: 0;
+    width: 100%;
+    max-width: 1158px;
+  }
+  .logotypediv {
+    margin-left: 156px;
+    margin-right: 120px;
   }
   .footemaildiv {
     margin-left: 80px;
   }
+  .footerprag {
+    max-width: 264px;
+    margin-bottom: 0;
+  }
   .footersocila {
-    margin-left: 120px;
+    margin-bottom: 0;
   }
   .formfoot {
     flex-wrap: nowrap;
@@ -884,9 +896,9 @@ span {
   position: fixed;
   top: 0;
   background-color: rgba(46, 47, 66, 0.4);
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
